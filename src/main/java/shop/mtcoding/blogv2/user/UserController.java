@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
+    @Autowired
+    private UserService userService;
+
  // 회원정보 화면 호출
     @GetMapping("/user/updateForm")
     public String updateForm() {
@@ -26,9 +29,6 @@ public class UserController {
         System.out.println("로그인 구현 완료");
         return "redirect:/";
     }
-
-    @Autowired
-    private UserService userService;
 
     @GetMapping("/joinForm")
     public String joinForm() {

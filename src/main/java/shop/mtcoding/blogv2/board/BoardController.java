@@ -1,6 +1,7 @@
 package shop.mtcoding.blogv2.board;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,6 +13,12 @@ public class BoardController {
     @PostMapping("/board/delete")
     public String delete() {
        
-        return ("/");
+    return ("/");
+    }
+
+    @GetMapping("/")
+    public String index(){
+        System.out.println("게시글 목록보기 완료");
+        return "index";
     }
 }
