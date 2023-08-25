@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class BoardController {
 
-       // 게시글 삭제
+    // 게시글 삭제
     @PostMapping("/board/delete")
     public String delete() {
-       
-    return ("/");
+        return ("/");
     }
 
     @GetMapping("/")
@@ -33,6 +32,4 @@ public class BoardController {
         System.out.println("글쓰기 기능 구현완료");
         return "/board/detail";
     }
-    
-
 }

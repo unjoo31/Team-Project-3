@@ -11,7 +11,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
- // 회원정보 화면 호출
+    // 회원정보 화면 호출
     @GetMapping("/user/updateForm")
     public String updateForm() {
       
