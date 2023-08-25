@@ -20,4 +20,17 @@ public class UserController {
         return "redirect:/";
     }
 
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/joinForm")
+    public String joinForm() {
+        return "/user/joinForm";
+    }
+
+    @PostMapping("/join")
+    public String join() {
+        userService.회원가입();
+        return "redirect:/loginForm";
+    }
 }
