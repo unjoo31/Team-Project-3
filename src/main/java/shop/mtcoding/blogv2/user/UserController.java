@@ -40,4 +40,9 @@ public class UserController {
         userService.회원가입();
         return "redirect:/loginForm";
     }
+
+    @PostMapping("/user/update")
+    public String update(){
+        return "redirect:/";
+    }
 }
