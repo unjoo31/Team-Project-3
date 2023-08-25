@@ -8,6 +8,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
+    @GetMapping("/loginForm")
+    public String loginForm(){
+        System.out.println("로그인 페이지 완료");
+        return "/loginForm";
+    } 
+
+    @PostMapping("/login")
+    public String login(){
+        System.out.println("로그인 구현 완료");
+        return "redirect:/";
+    }
+
     @Autowired
     private UserService userService;
 
@@ -21,6 +33,4 @@ public class UserController {
         userService.회원가입();
         return "redirect:/loginForm";
     }
-
-
 }
