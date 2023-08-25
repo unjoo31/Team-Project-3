@@ -13,6 +13,17 @@ public class UserController {
     public String updateForm() {
       
         return "user/updateForm";
+
+    @GetMapping("/loginForm")
+    public String loginForm(){
+        System.out.println("로그인 페이지 완료");
+        return "/loginForm";
+    } 
+
+    @PostMapping("/login")
+    public String login(){
+        System.out.println("로그인 구현 완료");
+        return "redirect:/";
     }
 
     @Autowired
