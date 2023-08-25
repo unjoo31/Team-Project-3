@@ -43,6 +43,6 @@ public class BoardController {
     @PostMapping("/board/save")
     public String save() {
         System.out.println("글쓰기 기능 구현완료");
-        return "/board/detail";
+        return "redirect:/";
     }
 }

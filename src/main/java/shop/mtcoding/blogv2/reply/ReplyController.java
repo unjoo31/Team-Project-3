@@ -13,4 +13,11 @@ public class ReplyController {
         return "redirect:/board/"+id;
     }
 
+    // 댓글 작성하기
+    @PostMapping("/save")
+    public String replySave(Integer id) {
+        System.out.println("댓글 작성 구현완료");
+        return "/board/detail" + id;
+    }
+
 }
