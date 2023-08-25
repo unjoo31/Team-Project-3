@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
+ // 회원정보 화면 호출
+    @GetMapping("/user/updateForm")
+    public String updateForm() {
+      
+        return "user/updateForm";
+
     @GetMapping("/loginForm")
     public String loginForm(){
         System.out.println("로그인 페이지 완료");
