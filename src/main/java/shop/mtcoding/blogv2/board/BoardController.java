@@ -12,8 +12,13 @@ public class BoardController {
     // 게시글 삭제
     @PostMapping("/board/delete")
     public String delete() {
-
         return ("/");
+    }
+
+    @GetMapping("/")
+    public String index() {
+        System.out.println("게시글 목록보기 완료");
+        return "index";
     }
 
     // 게시글 글쓰기
