@@ -12,13 +12,8 @@ public class BoardController {
     // 게시글 삭제
     @PostMapping("/board/delete")
     public String delete() {
-        return ("/");
-    }
 
-    @GetMapping("/")
-    public String index(){
-        System.out.println("게시글 목록보기 완료");
-        return "index";
+        return ("/");
     }
 
     // 게시글 글쓰기
@@ -30,6 +25,6 @@ public class BoardController {
     @PostMapping("/board/save")
     public String save() {
         System.out.println("글쓰기 기능 구현완료");
-        return "/board/detail";
+        return "redirect:/";
     }
 }
